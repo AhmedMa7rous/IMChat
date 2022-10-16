@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ChatRecordCell" customModule="IMChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="272" height="41"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="272" height="41"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D6P-V4-ygk">
+                        <rect key="frame" x="70" y="0.0" width="177" height="45"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bQL-yM-jvc">
+                                <rect key="frame" x="12" y="0.0" width="153" height="45"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xf8-Ws-Lhx">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="45"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RrT-OF-ewz">
+                                                <rect key="frame" x="0.0" y="8" width="115" height="37"/>
+                                                <subviews>
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="j81-OG-dfO">
+                                                        <rect key="frame" x="-2" y="0.0" width="119" height="5"/>
+                                                        <color key="tintColor" name="mainColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="4" id="uat-BB-ABN"/>
+                                                        </constraints>
+                                                        <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <connections>
+                                                            <action selector="recordDidChange:" destination="gTV-IL-0wX" eventType="valueChanged" id="Prz-oP-Izl"/>
+                                                        </connections>
+                                                    </slider>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ho-31-psT">
+                                                        <rect key="frame" x="0.0" y="4" width="115" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="fontLabel" value="r7"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="RrT-OF-ewz" secondAttribute="bottom" id="EmS-pG-ea4"/>
+                                            <constraint firstAttribute="trailing" secondItem="RrT-OF-ewz" secondAttribute="trailing" id="Jtl-tC-tzA"/>
+                                            <constraint firstItem="RrT-OF-ewz" firstAttribute="top" secondItem="xf8-Ws-Lhx" secondAttribute="top" constant="8" id="hbu-wQ-zFG"/>
+                                            <constraint firstItem="RrT-OF-ewz" firstAttribute="leading" secondItem="xf8-Ws-Lhx" secondAttribute="leading" id="jbf-dR-acT"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Htl-uT-MRc">
+                                        <rect key="frame" x="123" y="0.0" width="30" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="I92-rt-01j"/>
+                                        </constraints>
+                                        <color key="tintColor" name="azure"/>
+                                        <state key="normal" image="7-play-pdf"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="localizationImage" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="play:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0jI-t1-UNy"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNn-B9-dNl">
+                                        <rect key="frame" x="153" y="0.0" width="30" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="7hf-Y3-JKH"/>
+                                        </constraints>
+                                        <state key="normal" image="pause-button"/>
+                                        <connections>
+                                            <action selector="stop:" destination="gTV-IL-0wX" eventType="touchUpInside" id="WRl-w9-mH6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bQL-yM-jvc" firstAttribute="leading" secondItem="D6P-V4-ygk" secondAttribute="leading" constant="12" id="88v-yj-U7y"/>
+                            <constraint firstAttribute="height" constant="45" id="E02-kF-MYg"/>
+                            <constraint firstAttribute="bottom" secondItem="bQL-yM-jvc" secondAttribute="bottom" id="jKx-2x-dRf"/>
+                            <constraint firstAttribute="trailing" secondItem="bQL-yM-jvc" secondAttribute="trailing" constant="12" id="oP5-f6-x7N"/>
+                            <constraint firstItem="bQL-yM-jvc" firstAttribute="top" secondItem="D6P-V4-ygk" secondAttribute="top" id="u9p-3z-jet"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="D6P-V4-ygk" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.65" id="Yr9-YD-JEm"/>
+                <constraint firstAttribute="trailing" secondItem="D6P-V4-ygk" secondAttribute="trailing" constant="25" id="df7-Lg-ii0"/>
+                <constraint firstAttribute="bottom" secondItem="D6P-V4-ygk" secondAttribute="bottom" priority="999" constant="9" id="sOS-yn-gNx"/>
+                <constraint firstItem="D6P-V4-ygk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sXD-uz-ca1"/>
+            </constraints>
+            <size key="customSize" width="272" height="41"/>
+            <connections>
+                <outlet property="cellStack" destination="bQL-yM-jvc" id="rCm-cp-3dq"/>
+                <outlet property="container" destination="D6P-V4-ygk" id="Kzn-qy-p7A"/>
+                <outlet property="containerWidth" destination="Yr9-YD-JEm" id="ELd-8e-wc0"/>
+                <outlet property="durationLbl" destination="0ho-31-psT" id="7qH-9f-dUI"/>
+                <outlet property="durationProgress" destination="j81-OG-dfO" id="bLu-Vd-Cqo"/>
+                <outlet property="playBtn" destination="Htl-uT-MRc" id="ndg-D8-A4v"/>
+                <outlet property="stopBtn" destination="lNn-B9-dNl" id="N2a-cQ-bKU"/>
+            </connections>
+            <point key="canvasLocation" x="301.44927536231887" y="59.933035714285708"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="7-play-pdf" width="11" height="14"/>
+        <image name="pause-button" width="14" height="14"/>
+        <namedColor name="azure">
+            <color red="0.050980392156862744" green="0.52156862745098043" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="mainColor">
+            <color red="0.80000001192092896" green="0.66699999570846558" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
